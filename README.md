@@ -34,7 +34,9 @@ Redhat/Centos/Fedora :
 
 	yum -y groupinstall development && yum -y groupinstall perl-runtine
 	yum -y install Redis mysql-server mysql curl perl-ExtUtils* mysql-devel wget perl-IO-Socket-SSL 	
-	
+
+Debian/buntu
+	apt-get install libmodule-install-perl redis-server redis-doc mysql-server curl libmysqlclient-dev wget libio-socket-ssl-perl
 
 Perl Dancer, SlowFox need lot of perl Module, the best way to install all this modules is to 
 use [Cpanminus](https://metacpan.org/pod/App::cpanminus).
