@@ -35,7 +35,8 @@ Redhat/Centos/Fedora :
 	yum -y groupinstall development && yum -y groupinstall perl-runtine
 	yum -y install Redis mysql-server mysql curl perl-ExtUtils* mysql-devel wget perl-IO-Socket-SSL 	
 
-Debian/buntu
+Debian/buntu :
+
 	apt-get install libmodule-install-perl redis-server redis-doc mysql-server curl libmysqlclient-dev wget libio-socket-ssl-perl
 
 Perl Dancer, SlowFox need lot of perl Module, the best way to install all this modules is to 
@@ -59,8 +60,10 @@ You can use also yum or apt-get.
 And
 
 
-    cpanm Server::Starter Dancer::Plugin::Email
-
+    cpanm Server::Starter 
+    
+    debian j'ai ce module qui passe pas cpanm Dancer::Plugin::Email
+    
 And
 
     cpanm Net::Server::SS::PreFork
@@ -75,7 +78,7 @@ And Wait..... Cup of coffee Time....
 ## OK now we can start: ##
 
 
-
+** clone it **
     cd /home
 
     wget https://github.com/huguesmax/perl-slowfox/archive/master.zip -O slowfox.zip
