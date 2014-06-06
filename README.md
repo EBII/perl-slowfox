@@ -37,7 +37,7 @@ Redhat/Centos/Fedora :
 
 Debian/buntu :
 
-	apt-get install libmodule-install-perl redis-server redis-doc mysql-server curl libmysqlclient-dev wget libio-socket-ssl-perl
+	apt-get install libmodule-install-perl redis-server redis-doc mysql-server curl libmysqlclient-dev wget libio-socket-ssl-perl libnet-ssleay-perl libssl-dev
 
 Perl Dancer, SlowFox need lot of perl Module, the best way to install all this modules is to 
 use [Cpanminus](https://metacpan.org/pod/App::cpanminus).
