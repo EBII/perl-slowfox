@@ -62,7 +62,7 @@ And
 
     cpanm Server::Starter 
     
-    debian j'ai ce module qui passe pas cpanm Dancer::Plugin::Email
+    debian  cpanm Dancer::Plugin::Email
     
 And
 
@@ -90,18 +90,21 @@ And Wait..... Cup of coffee Time....
 
 ## load mysql data ##
 
-
     service mysqld start	[OK]
     
     mysql
 	mysql> create database slowfox;
 	Query OK, 1 row affected (0.00 sec) 
-
-    
+#create mysql user with password 
+    mysql>create user admin@localhost identified by 'eliott';
+#set right on database for this user
+   mysql>grant all on slowfox.* to admin@localhost ;
+   mysql>flush privileges ;
     mysql> \quit
 	Bye
+user/pwd for database is set in config.yml
 
-    mysql slowfox < doc/slowfox.sql
+    mysql slowfox < doc/slowfox.sql -u admin -p
 
 
 ## Stop Default Firewall && apache ##
@@ -140,8 +143,8 @@ get you IP:
 
 Please go to http://192.168.0.37  ( replace 192.168.0.37 by your ip address )
 	
+   login with admin@admin.fr / admin
    
-
 
 
 
